@@ -1,23 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from "./ui/components/header/header";
+import SearchBar from "./ui/components/search-bar/search-bar";
+import "./App.css";
+import PokemonList from "./ui/components/pokemon-list/pokemon-list";
 
 function App() {
+  const handleChange = () => {
+    console.log("rui");
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <Header />
+      <SearchBar placeholder="search pokemon" handleChange={handleChange} />
+      <PokemonList />
     </div>
   );
 }

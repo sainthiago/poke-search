@@ -1,7 +1,11 @@
+.searchbar {
+  margin-bottom: 30px;
+}
+
 .search {
-  width: 60%;
+  width: 625px;
   height: 30px;
-  margin-left: 60px;
+  /* margin-left: 25px; */
 }
 
 .searchbtn {
@@ -9,6 +13,6 @@
   color: #fff;
   border: none;
   border-radius: 4px;
-  margin-left: 10px;
+  margin-left: 20px;
   height: 30px;
 }

@@ -1,11 +1,6 @@
-import { useEffect } from "react";
 import "./pokemon-card.css";
 
 function PokemonCard({ pokemon, number }) {
-  useEffect(() => {
-    console.log(number);
-  });
-
   return (
     <div className="pokemon-card">
       <img
@@ -17,7 +12,7 @@ function PokemonCard({ pokemon, number }) {
         className="pokemon-text
       "
       >
-        {pokemon.name} #{number}
+        #{number} {pokemon.name}
       </p>
     </div>
   );

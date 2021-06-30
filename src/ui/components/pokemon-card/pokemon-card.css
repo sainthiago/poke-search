@@ -3,7 +3,7 @@
   display: inline-grid;
   grid-template-areas: "image text";
   grid-template-columns: 60px auto;
-  width: 30%;
+  width: 300px;
   border-radius: 5px;
   margin: 10px;
 }

@@ -4,15 +4,15 @@ import "./App.css";
 import PokemonList from "./ui/components/pokemon-list/pokemon-list";
 
 function App() {
-  const handleChange = () => {
-    console.log("rui");
-  };
+  const handleChange = () => {};
 
   return (
     <div className="app">
-      <Header />
-      <SearchBar placeholder="search pokemon" handleChange={handleChange} />
-      <PokemonList />
+      <div className="container">
+        <Header />
+        <SearchBar placeholder="search pokemon" handleChange={handleChange} />
+        <PokemonList />
+      </div>
     </div>
   );
 }

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import PokemonCard from "../pokemon-card/pokemon-card";
 import "./pokemon-list.css";
 
@@ -17,7 +17,6 @@ export default class PokemonList extends React.Component {
   }
 
   render() {
-    console.log(this.state.pokemons);
     let pokemons = [];
     if (!!this.state.pokemons.length) {
       pokemons = this.state.pokemons.map((pokemon, i) => (
@@ -28,3 +27,30 @@ export default class PokemonList extends React.Component {
     return <div className="pokemon-list">{pokemons}</div>;
   }
 }
+
+// FUNCTIONAL APPROACH
+// function PokemonList() {
+//     const [data, setData] = useState({});
+
+//     useEffect(() => {
+//       if (Object.keys(data).length === 0) {
+//         fetch("https://pokeapi.co/api/v2/pokemon?limit=151")
+//           .then((response) => response.json())
+//           .then((name) => setData(name.results))
+//           .catch((error) => console.log(error));
+//       }
+//       console.log(data);
+//     });
+
+//     if (!(data && data.items)) {
+//       return <p>still loading</p>;
+//     }
+//     return (
+//       <div className="pokemon-list">
+//         {data.items.map((pokemon, i) => (
+//           <PokemonCard pokemon={pokemon} number={i + 1} key={pokemon.name} />
+//         ))}
+//       </div>
+//     );
+//   }
+// export default PokemonList;

@@ -1,15 +1,17 @@
 import "./search-bar.css";
 
-function SearchBar({ placeholder, handleChange }) {
+function SearchBar({ handleChange, filterPokemons }) {
   return (
     <div className="searchbar">
       <input
         className="search"
         type="search"
-        placeholder={placeholder}
+        placeholder="search pokemon"
         onChange={handleChange}
       />
-      <button className="searchbtn">search</button>
+      <button className="searchbtn" onClick={filterPokemons}>
+        search
+      </button>
     </div>
   );
 }

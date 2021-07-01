@@ -1,19 +1,15 @@
 import "./pokemon-card.css";
 
-function PokemonCard({ pokemon, number }) {
+function PokemonCard({ pokemon, pokemonNumber }) {
   return (
     <div className="pokemon-card">
       <img
         className="pokemon-image"
-        src={`https://pokeres.bastionbot.org/images/pokemon/${number}.png`}
+        src={`https://pokeres.bastionbot.org/images/pokemon/${pokemonNumber}.png`}
         alt={pokemon.name}
       />
-      <p
-        className="pokemon-text
-      "
-      >
-        #{number} {pokemon.name}
-      </p>
+      <p className="pokemon-number">#{pokemonNumber}</p>
+      <p className="pokemon-name">{pokemon.name}</p>
     </div>
   );
 }

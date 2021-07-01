@@ -1,8 +1,8 @@
 .pokemon-card {
   border: 1px solid black;
   display: inline-grid;
-  grid-template-areas: "image text";
-  grid-template-columns: 60px auto;
+  grid-template-areas: "image number name";
+  grid-template-columns: 60px 60px auto;
   width: 300px;
   border-radius: 5px;
   margin: 10px;
@@ -13,7 +13,19 @@
   height: 50px;
 }
 
-.pokemon-text {
-  grid-area: text;
+.pokemon-number {
+  grid-area: number;
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 700;
   margin: 0;
+}
+
+.pokemon-name {
+  grid-area: name;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  font-size: 14px;
 }

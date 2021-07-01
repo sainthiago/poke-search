@@ -5,7 +5,6 @@
 .search {
   width: 625px;
   height: 30px;
-  /* margin-left: 25px; */
 }
 
 .searchbtn {
@@ -15,4 +14,17 @@
   border-radius: 4px;
   margin-left: 20px;
   height: 30px;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .search {
+    width: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .search {
+    width: 280px;
+  }
 }
